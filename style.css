@@ -1,81 +1,82 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-body{
+body {
     background-color: #342929;
+    box-sizing: border-box;
+    margin: 0;
 }
 
-.nav{
+li,a,button {
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    background-color: black;
+}
+
+.logo {
+    color: rgb(229, 16, 16);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 35px;
+    margin-inline: 2%;
+}
+
+.nav-links {   
+    list-style: none;
     background-color: black;
     color:rgb(201, 14, 14);
-    
-}
-.logo{
-    font-size: 29px;
-    display: flex;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-
-
-nav ul{
-    display: flex;
-    justify-content:center;
-    align-items: center;
+.nav-links li {
+    display:inline-flex;
+    padding: 0px 10px;
+    justify-content:space-between;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:15px;
-    font-weight: 700;
-    gap: 4px;
-    list-style-type: none;
-    margin-left: 20%;
+    ;  
 }
 
-nav a{
-    text-decoration: none;
-    color: rgb(245, 238, 238);
-    transition: 0,3s;
-    padding: 5px 10px;
-    border-radius: 5px;
-    position: relative;
-}
-nav a:hover{
-color: rgb(201, 14, 14);
+.nav-links li a:hover {
+    color: rgb(195, 25, 25);
+    border-bottom: 1px solid #fff;
 }
 
-nav a::after{
-    content:"";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 100%;
-    height: 1px;
-    background-color:rgb(151, 134, 134);
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
+button {
+    padding: 5px 20px;
+    color: #fff;
+    background-color: rgb(195, 25, 25);
+    border: none;
+    border-radius: 60px; 
+    cursor: pointer;
 }
-nav a:hover::after{
-    transform: scaleX(1);
-}
-.search-container {
-    margin-left: 10xp;
-}
+button:hover {
+    color: rgb(195, 25, 25);
+    background-color: #fff;
+    }
+    
 .search-input {
     padding: 5px;
     border: none;
-    border-radius: 3px;
+    border-radius: 60px;
+    margin-left: 90%;
 }
-.login-bnt{
-    background: #a91f1f;
-    padding: 5px 35px;
-    border-radius: 3px; 
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    color: aliceblue;
+
+@media(max-width: 800px){
+    li,a,button {
+        font-size: 10px;
+
 }
+.search-input {
+    padding: 5px 5px;
+    margin-left: 2%;
+    font-size: 8px;
+
+}
+.logo {
+    font-size: 25px;
+}
+
+}
+
